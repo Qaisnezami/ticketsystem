@@ -30,7 +30,7 @@ class UserTableSeeder extends Seeder
         ];
 
         User::insert($users);
-        Profile::insert([
+        Profile::insert([[
             'user_id' => 1,
             'phone' => '1234567890',
             'image' => '',
@@ -39,7 +39,7 @@ class UserTableSeeder extends Seeder
             'user_id' => 2,
             'phone' => '1234567890',
             'image' => '',
-        ]
+        ]]
     );
     }
 }
