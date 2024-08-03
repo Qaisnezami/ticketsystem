@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\Profile;
 use App\Models\User;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
@@ -29,5 +30,16 @@ class UserTableSeeder extends Seeder
         ];
 
         User::insert($users);
+        Profile::insert([
+            'user_id' => 1,
+            'phone' => '1234567890',
+            'image' => '',
+        ],
+        [
+            'user_id' => 2,
+            'phone' => '1234567890',
+            'image' => '',
+        ]
+    );
     }
 }
